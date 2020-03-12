@@ -1,0 +1,37 @@
+<!--CSS Tricks n Tips-->
+<!--SlideShow-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SlideShow</title>
+    <link rel="stylesheet" href="ImageSlideShow.css">
+</head>
+
+<body onload="slideshow()">
+    <div class="container">
+        <img class="slideshow" src="images/animals (1).jpg"></img>
+    </div>
+    <script>
+        var slide = document.querySelector(".slideshow");
+        var images = ['images/animals\ \(1\).jpg', 'images/animals\ \(2\).jpg', 'images/animals\ \(3\).jpg', 'images/animals\ \(4\).jpg', 'images/animals\ \(5\).jpg', 'images/animals\ \(6\).jpg', 'images/animals\ \(7\).jpg', 'images/animals\ \(8\).jpg', 'images/animals\ \(9\).jpg', 'images/animals\ \(10\).jpg', 'images/animals\ \(11\).jpg', 'images/animals\ \(12\).jpg', 'images/animals\ \(13\).jpg', 'images/animals\ \(14\).jpg', 'images/animals\ \(15\).jpg', ];
+        var count = 0;
+        var limit = images.length - 1;
+
+        function slideshow() {
+            setInterval(() => {
+                console.log("inside slideshow");
+                if (count === limit) {
+                    count = 0;
+                } else {
+                    count++;
+                    slide.setAttribute("src", "" + images[count]);
+                }
+            }, 1500);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+/*CSS Tricks n Tips
+SlideShow*/
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.slideshow {
+    width: 600px;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    transition: 1s ease-in;
+    border-radius: 8px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.slideshow:hover {
+    width: 700px;
+    height: 408px;
+}
